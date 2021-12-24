@@ -1,0 +1,2 @@
+(this.webpackJsonpcromatografia=this.webpackJsonpcromatografia||[]).push([[4],{36:function(a){a.exports=JSON.parse('{"C1":0.75964,"C2":0.09347,"C3":0.04777,"i-C4":0.00864,"n-C4":0.0129,"i-C5":0.00385,"n-C5":0.0031,"C6":0.00208,"C7":0.00102,"C8":0.00034,"C9":0.00007,"C10":0.00002,"CO2":0.065,"H2S":0.00007,"N":0.00203,"presion":1200,"temperatura":151,"z":0.9,"nombre":"Ander-Jonattan"}')}}]);
+//# sourceMappingURL=4.2ac74a19.chunk.js.map
