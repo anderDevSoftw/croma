@@ -1,0 +1,13 @@
+.button {
+  margin-block-start: var(--spacing-md);
+  color: white;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 1000px;
+  border: none;
+  background: rgb(129, 140, 248);
+  background: linear-gradient(
+    159deg,
+    rgba(129, 140, 248, 1) 27%,
+    rgba(67, 56, 202, 1) 97%
+  );
+}

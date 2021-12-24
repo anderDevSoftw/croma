@@ -1,0 +1,40 @@
+.project {
+  position: relative;
+  padding: var(--spacing-sm);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background: var(--body-bg);
+  border-radius: 10px;
+  gap: var(--spacing-sm);
+  color: var(--headings-color);
+  cursor: pointer;
+  align-items: center;
+}
+.project > h3 {
+  color: var(--headings-color);
+  font-size: 10px;
+}
+.project__trash {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: #7c85d5b3;
+  border-radius: 50%;
+  border: none;
+}
+.project__trash > svg {
+  color: var(--body-bg);
+}
+.project > svg {
+  font-size: 2rem;
+}
+.project__link > svg {
+  color: var(--light-indigo);
+  width: 132px;
+}

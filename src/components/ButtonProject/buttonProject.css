@@ -1,0 +1,21 @@
+.buttonProject {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: white;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 1000px;
+  border: none;
+  background: rgb(129, 140, 248);
+  background: linear-gradient(
+    159deg,
+    rgba(129, 140, 248, 1) 27%,
+    rgba(67, 56, 202, 1) 97%
+  );
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+.buttonProject > svg {
+  width: 2rem;
+}

@@ -1,0 +1,12 @@
+.input {
+  width: fit-content;
+  border-radius: 16px;
+  padding: calc(var(--spacing-sm) / 2);
+  font-size: 1rem;
+}
+.input__label {
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  color: var(--text-color);
+}

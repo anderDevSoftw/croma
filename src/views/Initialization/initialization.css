@@ -1,0 +1,27 @@
+.initialization {
+  max-width: 750px;
+  margin-block: var(--spacing-md);
+  margin-inline: auto;
+  background-color: var(--elements-bg);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: 10px;
+}
+.initialization > h2 {
+  margin-block-end: var(--spacing-sm);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.form__group > h3 {
+  padding: var(--spacing-sm) 0;
+  border-block-end: 1px solid var(--bottom-line-color);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  justify-items: center;
+  gap: 1rem 4rem;
+  margin-block-start: var(--spacing-sm);
+}

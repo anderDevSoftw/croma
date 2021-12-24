@@ -1,0 +1,40 @@
+.tooltip {
+  position: absolute;
+  top: 40px;
+  right: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: var(--spacing-sm);
+  background-color: #8d8bbb;
+  border-radius: 10px;
+  list-style: none;
+}
+.tooltip > li > button {
+  color: var(--text-color);
+  display: flex;
+  place-items: center;
+  grid-gap: 1rem;
+  gap: 1rem;
+  background: none;
+  border: none;
+  width: 100%;
+}
+
+.tooltip > li > button:hover {
+  color: hsl(240, 33%, 99%);
+}
+.tooltip > li > button > svg {
+  width: 1rem;
+}
+.tooltip::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background-color: inherit;
+  position: absolute;
+  top: 4px;
+  right: 9px;
+  transform: translateY(-100%);
+}

@@ -1,0 +1,17 @@
+.results {
+  max-width: 750px;
+  margin: var(--spacing-md) auto;
+  background-color: var(--elements-bg);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 16px;
+}
+.results > h2 {
+  padding: var(--spacing-sm) 0;
+  border-block-end: 1px solid var(--bottom-line-color);
+}
+.results__values {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(90%, 300px), 1fr));
+  gap: 2rem;
+  margin-block-start: var(--spacing-sm);
+}
