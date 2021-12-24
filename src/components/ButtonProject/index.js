@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function ButtonProject() {
   return (
-    <Link to="initialization">
+    <Link to="/croma/initialization">
       <button className="buttonProject">
         <svg
           aria-hidden="true"

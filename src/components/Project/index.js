@@ -17,12 +17,12 @@ export default function Project({ nombre, id, update }) {
   const clone = () => {
     const project = DB.getProject(id);
     const ind = DB.setProject(project);
-    navigate(`/initialization/${ind}`)
+    navigate(`/croma/initialization/${ind}`)
     
   }
 
   const edit = () => {
-    navigate(`/initialization/${id}`)
+    navigate(`/croma/initialization/${id}`)
   }
 
   return (
@@ -43,7 +43,7 @@ export default function Project({ nombre, id, update }) {
         </svg>
       </button>
       {isTooltipActive && <Tooltip delet={delet} clone={clone} edit={edit} />}
-      <Link to={`results/${id}`} className="project__link">
+      <Link to={`/croma/results/${id}`} className="project__link">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

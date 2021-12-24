@@ -29,7 +29,7 @@ export default function Initialization() {
     if(id){
       const project = DB.getProject(parseInt(id));
       if(!project){
-        navigate("/initialization")
+        navigate("/croma/initialization")
       } else {
         setValue(project)
       }
@@ -50,7 +50,7 @@ export default function Initialization() {
     }else {
       id = DB.setProject(results)
     }
-    navigate(`/results/${id}`);
+    navigate(`/croma/results/${id}`);
   }
 
   return (

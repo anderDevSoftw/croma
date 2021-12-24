@@ -9,11 +9,11 @@ function App() {
     <div className="app">
       <NavBar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="initialization" element={<Initialization />} />
-        <Route path="initialization/:id" element={<Initialization />} >
+        <Route path="croma" element={<Home />} />
+        <Route path="croma/initialization" element={<Initialization />} />
+        <Route path="croma/initialization/:id" element={<Initialization />} >
         </Route>
-        <Route path="results/:id" element={<Results />} />
+        <Route path="croma/results/:id" element={<Results />} />
       </Routes>
     </div>
   );
