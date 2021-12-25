@@ -47,7 +47,6 @@ export default function Initialization() {
         normalize += results[key];
       }
     });
-    console.log(normalize)
     if(normalize !== 1){
       alert("Por favor, normaliza las fracciones molares, las suma de estas deben dar 1");
       return ;
