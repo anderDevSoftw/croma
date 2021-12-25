@@ -48,7 +48,7 @@ export default function Initialization() {
       }
     });
     if(normalize !== 1){
-      alert("Por favor, normaliza las fracciones molares, las suma de estas deben dar 1");
+      alert("Por favor, normaliza las fracciones molares, la suma de estas deben dar 1");
       return ;
     }
     results['nombre'] = value['nombre'] === ''?'DINAV-CROMA':value['nombre'];
