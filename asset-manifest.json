@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/croma/static/css/main.9c36b735.chunk.css",
-    "main.js": "/croma/static/js/main.a24f55eb.chunk.js",
-    "main.js.map": "/croma/static/js/main.a24f55eb.chunk.js.map",
+    "main.css": "/croma/static/css/main.2878f384.chunk.css",
+    "main.js": "/croma/static/js/main.dfa4e18c.chunk.js",
+    "main.js.map": "/croma/static/js/main.dfa4e18c.chunk.js.map",
     "runtime-main.js": "/croma/static/js/runtime-main.e1a43d87.js",
     "runtime-main.js.map": "/croma/static/js/runtime-main.e1a43d87.js.map",
     "static/js/2.070dd6d7.chunk.js": "/croma/static/js/2.070dd6d7.chunk.js",
@@ -12,14 +12,14 @@
     "static/js/4.2ac74a19.chunk.js": "/croma/static/js/4.2ac74a19.chunk.js",
     "static/js/4.2ac74a19.chunk.js.map": "/croma/static/js/4.2ac74a19.chunk.js.map",
     "index.html": "/croma/index.html",
-    "static/css/main.9c36b735.chunk.css.map": "/croma/static/css/main.9c36b735.chunk.css.map",
+    "static/css/main.2878f384.chunk.css.map": "/croma/static/css/main.2878f384.chunk.css.map",
     "static/js/2.070dd6d7.chunk.js.LICENSE.txt": "/croma/static/js/2.070dd6d7.chunk.js.LICENSE.txt",
     "static/media/noProjects.13e820c6.svg": "/croma/static/media/noProjects.13e820c6.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.e1a43d87.js",
     "static/js/2.070dd6d7.chunk.js",
-    "static/css/main.9c36b735.chunk.css",
-    "static/js/main.a24f55eb.chunk.js"
+    "static/css/main.2878f384.chunk.css",
+    "static/js/main.dfa4e18c.chunk.js"
   ]
 }
