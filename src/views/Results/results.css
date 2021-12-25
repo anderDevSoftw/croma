@@ -7,6 +7,7 @@
 }
 .results > h2 {
   padding: var(--spacing-sm) 0;
+  position: relative;
   border-block-end: 1px solid var(--bottom-line-color);
 }
 .results__values {
@@ -14,4 +15,24 @@
   grid-template-columns: repeat(auto-fit, minmax(min(90%, 300px), 1fr));
   gap: 2rem;
   margin-block-start: var(--spacing-sm);
+}
+
+.results__trash {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: #7c85d5b3;
+  border-radius: 50%;
+  border: none;
+}
+.results__trash > svg {
+  color: var(--body-bg);
+}
+.results__resumen{
+  font-size: 1.4rem;
+  padding-top: 1rem;
 }

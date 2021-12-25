@@ -4,6 +4,8 @@ import DB from "../../utilities/db";
 import data from "../../data/compounds.json";
 import {add, multiply, divide, newtonRaphson } from "../../modules/math";
 import Result from "../../components/Result";
+import useToggle from "../../hooks/useToggle";
+import Tooltip from "../../components/Tooltip"
 
 import "./results.css";
 
@@ -11,7 +13,30 @@ export default function Results() {
 
   const params = useParams();
   const navigate = useNavigate();
-  const [results,setResults] = useState([])
+  const [isTooltipActive, toggle] = useToggle();
+  const [results,setResults] = useState([]);
+  const [isRico,setRico] = useState(false);
+  const [isAcido,setAcido] = useState(false);
+
+  const delet = () => {
+    toggle();
+    const id = parseInt(params.id);
+    DB.deleteProject(id);
+    navigate("/croma");
+  }
+
+  const clone = () => {
+    const id = parseInt(params.id);
+    const project = DB.getProject(id);
+    const ind = DB.setProject(project);
+    navigate(`/croma/initialization/${ind}`)
+    
+  }
+
+  const edit = () => {
+    const id = parseInt(params.id);
+    navigate(`/croma/initialization/${id}`)
+  }
 
   useEffect(() => {
     const id = params.id;
@@ -48,6 +73,9 @@ export default function Results() {
         YiPsc.push(yipsc);
         YiW.push(yiw);
       })
+      
+      setRico(add(...YiPi) >= 2);
+      setAcido(!(proyect["CO2"] < 0.003 && proyect["H2S"] < 0.000016))
       r.push({ dato: "Masa molar aparente", unidad:"lb/lbmol", value: add(...YiMi) });
       r.push({ dato: "Riqueza liquida", unidad:"GPM",value: add(...YiPi) });
       r.push({ dato: "Compresibilidad del gas",unidad:"1/lpca", value: divide(1,proyect["presion"]) },);
@@ -113,11 +141,36 @@ export default function Results() {
 
   return (
     <main className="results">
-      <h2>Resultados</h2>
+      <h2>
+        Resultados
+        <button aria-label="opciones" className="results__trash" onClick={toggle}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+            />
+          </svg>
+        </button>
+        {isTooltipActive && <Tooltip delet={delet} clone={clone} edit={edit} />}  
+      </h2>
       <div className="results__values">
         {results.map((resultado, id) => (
           <Result key={id} {...resultado} />
         ))}
+      </div>
+      <h2>Resumen general</h2>
+      <div className="results__resumen">
+        <p>
+          Estamos en presencia de un gas {isRico?"rico o humedo":"pobre o seco"}, y con {isAcido?"alto":"bajos"} niveles de concentración de H2S y CO2,
+          por lo cual se considera un gas {isAcido?"acido":"dulce"}.
+        </p>
       </div>
     </main>
   );
