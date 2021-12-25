@@ -40,9 +40,18 @@ export default function Initialization() {
     const ind = params.id;
     let results = {};
     const keys = {...data,'presion':'','temperatura':'','z':''};
+    let normalize = 0;
     Object.keys(keys).forEach(key => {
       results[key] = value[key] === ''?0:parseFloat(value[key]);
+      if(!["presion","temperatura","z"].some(el => el === key)){
+        normalize += results[key];
+      }
     });
+    console.log(normalize)
+    if(normalize !== 1){
+      alert("Por favor, normaliza las fracciones molares, las suma de estas deben dar 1");
+      return ;
+    }
     results['nombre'] = value['nombre'] === ''?'DINAV-CROMA':value['nombre'];
     let id;
     if(ind){
